@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management | CampusConnect</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2>CampusConnect</h2>
+
+        <nav>
+            <a href="../index.html">Dashboard</a>
+            <a href="students.html">Students</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="courses.html">Courses</a>
+            <a href="attendance.html" class="active">Attendance</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <h1>Attendance Management</h1>
+            <p>Mark and manage student attendance</p>
+        </header>
+
+        <section class="content">
+
+            <!-- Summary cards -->
+
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>Total Records</h3>
+                    <h2 id="totalRecords">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Present</h3>
+                    <h2 id="presentCount">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Absent</h3>
+                    <h2 id="absentCount">0</h2>
+                </div>
+            </div>
+
+            <!-- Mark Attendance -->
+
+            <div class="section-header">
+                <h2>Mark Attendance</h2>
+            </div>
+
+            <div class="form-container">
+                <form id="attendanceForm">
+
+                    <label>Select Student</label>
+                    <select id="studentSelect" required>
+                        <option value="">Loading students...</option>
+                    </select>
+
+                    <label>Attendance Date</label>
+                    <input type="date" id="attendanceDate" required>
+
+                    <label>Attendance Status</label>
+                    <select id="attendanceStatus" required>
+                        <option value="Present">Present</option>
+                        <option value="Absent">Absent</option>
+                    </select>
+
+                    <button type="submit" class="btn-primary">
+                        Save Attendance
+                    </button>
+
+                </form>
+            </div>
+
+            <!-- Attendance Records -->
+
+            <div class="section-header">
+                <h2>Attendance Records</h2>
+            </div>
+
+            <input
+                type="text"
+                id="searchAttendance"
+                placeholder="Search student..."
+            >
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Record ID</th>
+                            <th>Student Name</th>
+                            <th>Student ID</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="attendanceTable">
+                        <tr>
+                            <td colspan="5">Loading attendance...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Student Attendance Percentage -->
+
+            <div class="section-header">
+                <h2>Student Attendance Percentage</h2>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Total Classes</th>
+                            <th>Present</th>
+                            <th>Attendance Percentage</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="percentageTable">
+                        <tr>
+                            <td colspan="4">Loading...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+</div>
+
+<script src="../js/attendance.js"></script>
+
+</body>
+</html>

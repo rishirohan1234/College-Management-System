@@ -1,0 +1,27 @@
+
+[
+    {
+        "id": "STU001",
+        "name": "Rahul Kumar",
+        "department": "CSE",
+        "year": "3rd Year"
+    },
+    {
+        "id": "STU002",
+        "name": "Priya Sharma",
+        "department": "AIML",
+        "year": "2nd Year"
+    },
+    {
+        "id": "STU003",
+        "name": "Arjun Reddy",
+        "department": "ECE",
+        "year": "4th Year"
+    },
+    {
+        "id": "STU004",
+        "name": "Sneha Reddy",
+        "department": "CSE",
+        "year": "1st Year"
+    }
+]

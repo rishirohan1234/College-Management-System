@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Faculty Management | CampusConnect</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <h2>CampusConnect</h2>
+
+        <ul>
+            <li><a href="../index.html">Dashboard</a></li>
+            <li><a href="students.html">Students</a></li>
+            <li class="active">
+                <a href="faculty.html">Faculty</a>
+            </li>
+            <li>Courses</li>
+            <li>Attendance</li>
+            <li>Results</li>
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header>
+            <div>
+                <h1>Faculty Management</h1>
+                <p>Manage college faculty records</p>
+            </div>
+
+            <button onclick="openFacultyForm()">
+                + Add Faculty
+            </button>
+        </header>
+
+        <!-- Search -->
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search faculty..."
+            oninput="loadFaculty()"
+        >
+
+        <!-- Faculty Table -->
+        <section class="recent">
+
+            <h2>Faculty Records</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Faculty ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Designation</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="facultyTable">
+                    <tr>
+                        <td colspan="5">Loading faculty...</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- Add/Edit Faculty Modal -->
+        <div id="facultyModal" class="modal">
+
+            <div class="modal-content">
+
+                <h2 id="formTitle">Add Faculty</h2>
+
+                <input
+                    type="text"
+                    id="facultyId"
+                    placeholder="Faculty ID"
+                >
+
+                <input
+                    type="text"
+                    id="facultyName"
+                    placeholder="Faculty Name"
+                >
+
+                <select id="department">
+                    <option value="">Select Department</option>
+                    <option value="CSE">CSE</option>
+                    <option value="AIML">AIML</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                </select>
+
+                <select id="designation">
+                    <option value="">Select Designation</option>
+                    <option value="Professor">Professor</option>
+                    <option value="Associate Professor">
+                        Associate Professor
+                    </option>
+                    <option value="Assistant Professor">
+                        Assistant Professor
+                    </option>
+                    <option value="Lecturer">Lecturer</option>
+                </select>
+
+                <button onclick="saveFaculty()">
+                    Save Faculty
+                </button>
+
+                <button onclick="closeFacultyForm()">
+                    Cancel
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="../js/faculty.js"></script>
+
+</body>
+</html>

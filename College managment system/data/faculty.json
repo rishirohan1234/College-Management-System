@@ -1,0 +1,21 @@
+
+[
+    {
+        "id": "FAC001",
+        "name": "Dr. Suresh Kumar",
+        "department": "CSE",
+        "designation": "Professor"
+    },
+    {
+        "id": "FAC002",
+        "name": "Dr. Lakshmi Devi",
+        "department": "AIML",
+        "designation": "Associate Professor"
+    },
+    {
+        "id": "FAC003",
+        "name": "Mr. Ramesh Reddy",
+        "department": "ECE",
+        "designation": "Assistant Professor"
+    }
+]

@@ -1,0 +1,31 @@
+
+[
+    {
+        "id": "ATT001",
+        "student_id": "STU001",
+        "student_name": "Rahul Kumar",
+        "date": "2026-11-24",
+        "status": "Present"
+    },
+    {
+        "id": "ATT002",
+        "student_id": "STU002",
+        "student_name": "Priya Sharma",
+        "date": "2026-11-24",
+        "status": "Absent"
+    },
+    {
+        "id": "ATT003",
+        "student_id": "STU003",
+        "student_name": "Arjun Reddy",
+        "date": "2026-11-24",
+        "status": "Present"
+    },
+    {
+        "id": "ATT004",
+        "student_id": "STU004",
+        "student_name": "Sneha Reddy",
+        "date": "2026-11-24",
+        "status": "Present"
+    }
+]

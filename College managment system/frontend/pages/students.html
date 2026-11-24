@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <h2>CampusConnect</h2>
+
+        <ul>
+            <li><a href="../index.html">Dashboard</a></li>
+            <li class="active"><a href="students.html">Students</a></li>
+            <li>Faculty</li>
+            <li>Courses</li>
+            <li>Attendance</li>
+            <li>Results</li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+
+        <header>
+            <div>
+                <h1>Student Management</h1>
+                <p>Manage college student records</p>
+            </div>
+
+            <button onclick="openForm()">+ Add Student</button>
+        </header>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search students..."
+            oninput="loadStudents()"
+        >
+
+        <section class="recent">
+
+            <h2>Student Records</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Year</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentTable"></tbody>
+
+            </table>
+
+        </section>
+
+        <!-- Add/Edit Student Form -->
+
+        <div id="studentModal" class="modal">
+
+            <div class="modal-content">
+
+                <h2 id="formTitle">Add Student</h2>
+
+                <input type="text" id="studentId"
+                    placeholder="Student ID">
+
+                <input type="text" id="studentName"
+                    placeholder="Student Name">
+
+                <select id="department">
+                    <option value="">Select Department</option>
+                    <option value="CSE">CSE</option>
+                    <option value="AIML">AIML</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                </select>
+
+                <select id="year">
+                    <option value="">Select Year</option>
+                    <option value="1st Year">1st Year</option>
+                    <option value="2nd Year">2nd Year</option>
+                    <option value="3rd Year">3rd Year</option>
+                    <option value="4th Year">4th Year</option>
+                </select>
+
+                <button onclick="saveStudent()">Save Student</button>
+
+                <button onclick="closeForm()">Cancel</button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="../js/students.js"></script>
+
+</body>
+</html>

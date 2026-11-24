@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination & Results | CampusConnect</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2>CampusConnect</h2>
+
+        <nav>
+            <a href="../index.html">Dashboard</a>
+            <a href="students.html">Students</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="courses.html">Courses</a>
+            <a href="attendance.html">Attendance</a>
+            <a href="results.html" class="active">Results</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <h1>Examination & Results</h1>
+            <p>Manage examinations, marks and student grades</p>
+        </header>
+
+        <section class="content">
+
+            <div class="stats-container">
+
+                <div class="stat-card">
+                    <h3>Total Results</h3>
+                    <h2 id="totalResults">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Average Percentage</h3>
+                    <h2 id="averagePercentage">0%</h2>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Pass Count</h3>
+                    <h2 id="passCount">0</h2>
+                </div>
+
+            </div>
+
+            <div class="section-header">
+                <h2>Add Examination Result</h2>
+            </div>
+
+            <div class="form-container">
+
+                <form id="resultForm">
+
+                    <label>Select Student</label>
+                    <select id="studentSelect" required>
+                        <option value="">Loading students...</option>
+                    </select>
+
+                    <label>Examination Name</label>
+                    <input
+                        type="text"
+                        id="examName"
+                        placeholder="Example: Mid Term"
+                        required
+                    >
+
+                    <label>Subject</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        placeholder="Example: Python Programming"
+                        required
+                    >
+
+                    <label>Marks Obtained</label>
+                    <input
+                        type="number"
+                        id="marks"
+                        min="0"
+                        step="0.01"
+                        required
+                    >
+
+                    <label>Maximum Marks</label>
+                    <input
+                        type="number"
+                        id="maxMarks"
+                        min="1"
+                        step="0.01"
+                        value="100"
+                        required
+                    >
+
+                    <button type="submit" class="btn-primary">
+                        Save Result
+                    </button>
+
+                </form>
+
+            </div>
+
+            <div class="section-header">
+                <h2>Student Results</h2>
+            </div>
+
+            <input
+                type="text"
+                id="searchResult"
+                placeholder="Search by student, subject or exam..."
+            >
+
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Result ID</th>
+                            <th>Student Name</th>
+                            <th>Exam</th>
+                            <th>Subject</th>
+                            <th>Marks</th>
+                            <th>Maximum</th>
+                            <th>Percentage</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="resultTable">
+                        <tr>
+                            <td colspan="8">Loading results...</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/results.js"></script>
+
+</body>
+</html>

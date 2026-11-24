@@ -1,0 +1,35 @@
+
+[
+    {
+        "id": "CRS001",
+        "name": "Python Programming",
+        "code": "CS101",
+        "department": "CSE",
+        "credits": 4,
+        "duration": "6 Months"
+    },
+    {
+        "id": "CRS002",
+        "name": "Machine Learning",
+        "code": "AI201",
+        "department": "AIML",
+        "credits": 4,
+        "duration": "6 Months"
+    },
+    {
+        "id": "CRS003",
+        "name": "Database Management Systems",
+        "code": "CS202",
+        "department": "CSE",
+        "credits": 3,
+        "duration": "4 Months"
+    },
+    {
+        "id": "CRS004",
+        "name": "Computer Networks",
+        "code": "EC301",
+        "department": "ECE",
+        "credits": 3,
+        "duration": "4 Months"
+    }
+]

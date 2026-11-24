@@ -1,0 +1,36 @@
+
+[
+    {
+        "id": "RES001",
+        "student_id": "STU001",
+        "student_name": "Rahul Kumar",
+        "exam": "Mid Term",
+        "subject": "Python Programming",
+        "marks": 85,
+        "max_marks": 100,
+        "percentage": 85,
+        "grade": "A"
+    },
+    {
+        "id": "RES002",
+        "student_id": "STU002",
+        "student_name": "Priya Sharma",
+        "exam": "Mid Term",
+        "subject": "Machine Learning",
+        "marks": 92,
+        "max_marks": 100,
+        "percentage": 92,
+        "grade": "A+"
+    },
+    {
+        "id": "RES003",
+        "student_id": "STU003",
+        "student_name": "Arjun Reddy",
+        "exam": "Mid Term",
+        "subject": "Computer Networks",
+        "marks": 68,
+        "max_marks": 100,
+        "percentage": 68,
+        "grade": "B"
+    }
+]

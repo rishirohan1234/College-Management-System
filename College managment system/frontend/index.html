@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusConnect | Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <h2>CampusConnect</h2>
+
+        <ul>
+            <li class="active">
+                <a href="index.html">Dashboard</a>
+            </li>
+
+            <li>
+                <a href="pages/students.html">Students</a>
+            </li>
+
+            <li>
+                <a href="pages/faculty.html">Faculty</a>
+            </li>
+
+            <li>
+                <a href="pages/courses.html">Courses</a>
+            </li>
+
+            <li>
+                <a href="pages/attendance.html">Attendance</a>
+            </li>
+
+            <li>
+                <a href="pages/results.html">Results</a>
+            </li>
+        </ul>
+
+        <button class="logout-button" onclick="logout()">
+            Logout
+        </button>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Dashboard Header -->
+        <header class="dashboard-header">
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>Welcome to CampusConnect</p>
+                <p>
+                    Logged in as:
+                    <span id="adminUsername">Admin</span>
+                </p>
+            </div>
+
+        </header>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="card">
+                <h3>Total Students</h3>
+                <h2 id="studentCount">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Faculty</h3>
+                <h2 id="facultyCount">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Courses</h3>
+                <h2 id="courseCount">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Attendance Records</h3>
+                <h2 id="attendanceCount">0</h2>
+            </div>
+
+        </section>
+
+
+        <!-- Recent Students -->
+        <section class="recent">
+
+            <h2>Recent Students</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentTable">
+
+                    <tr>
+                        <td colspan="4">
+                            Loading student data...
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>
+
